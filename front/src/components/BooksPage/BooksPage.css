@@ -1,0 +1,13 @@
+.books {
+    display: grid;
+    justify-content: center;
+    align-content: flex-start;
+
+}
+.books_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.books_container .card{
+    margin: 10px;
+}
