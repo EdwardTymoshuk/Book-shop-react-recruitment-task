@@ -1,0 +1,11 @@
+.order-form {
+    display: grid;
+    padding: 10vh 25vh;
+}
+.order-form button{
+    width: fit-content;
+    justify-self: end;
+}
+.order-form label{
+    text-align: start;
+}

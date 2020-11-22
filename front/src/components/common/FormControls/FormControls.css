@@ -1,0 +1,13 @@
+input {
+    width: 100%;
+    height: 3em;
+}
+.input {
+    margin-bottom: 20px;
+}
+.input.error input{
+    border: 2px solid #f76c6c;
+}
+.input.error small{
+    color: #f76c6c !important;
+}
