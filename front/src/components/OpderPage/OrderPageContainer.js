@@ -18,7 +18,6 @@ const OrderPageContainer = (props) => {
         }, {})
 
         props.makeAnOrder(Object.entries(order).map((item) => ({id: item[0], quantity: item[1]})), values)
-        console.log(Object.entries(order).map((item) => ({id: item[0], quantity: item[1]})))
     }
     return (
         <OrderPage cart={props.cart} makeAnOrder={makeAnOrder}/>

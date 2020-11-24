@@ -21,6 +21,5 @@ let mapStateToProps = (state) => {
     return {
         books: state.booksPage,
     }
-
 }
 export default connect(mapStateToProps, { getBooks, addToCart })(BooksPageContainer)

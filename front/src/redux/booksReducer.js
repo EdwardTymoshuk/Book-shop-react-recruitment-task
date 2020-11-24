@@ -21,8 +21,8 @@ export const getBooks = () => async (dispatch) => {
 }
 
 export const searchBook = (searchingElement) => async (dispatch) => {
-    let data = await booksAPI.getBooks()
-    !!searchingElement
+  let data = await booksAPI.getBooks()
+  !!searchingElement
     ?
     dispatch(setBooks(data.data.filter(item => {
       if (item.title.toLowerCase().includes(searchingElement.toLowerCase())) {

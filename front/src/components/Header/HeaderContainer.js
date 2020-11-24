@@ -6,12 +6,12 @@ import Header from './Header'
 
 const HeaderContainer = (props) => {
 
-   const searchBook = (searchingElement) => {
+    const searchBook = (searchingElement) => {
         props.searchBook(searchingElement)
-      }
+    }
 
     return (
-        <Header cart={props.cart} searchBook={searchBook}/>
+        <Header cart={props.cart} searchBook={searchBook} />
     )
 }
 
@@ -19,6 +19,5 @@ let mapStateToProps = (state) => {
     return {
         cart: state.cartPage.cart
     }
-    
 }
-export default connect(mapStateToProps, {setBooks, searchBook})(HeaderContainer)
+export default connect(mapStateToProps, { setBooks, searchBook })(HeaderContainer)

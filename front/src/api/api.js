@@ -1,4 +1,4 @@
-import * as axios from 'axios';
+import * as axios from 'axios'
 
 const instance = axios.create({
     baseURL: 'http://localhost:3001/api/'
@@ -7,11 +7,11 @@ const instance = axios.create({
 export const booksAPI = {
     getBooks() {
         return instance.get('/book').then(response => response.data)
-        }
     }
+}
 
-    export const cartAPI = {
-        makeAnOrder({order, ...customer}) {
-            return instance.post('/order', {order, ...customer}).then(response => response.data)
-        }
+export const cartAPI = {
+    makeAnOrder({ order, ...customer }) {
+        return instance.post('/order', { order, ...customer }).then(response => response.data)
     }
+}
