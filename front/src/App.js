@@ -1,19 +1,19 @@
 import './App.css'
-import Header from './components/Header/Header'
 import BooksPageContainer from './components/BooksPage/BooksPageContainer'
 import { Switch, Route } from 'react-router-dom'
 import CartPageContainer from './components/CartPage/CartPageContainer'
 import HeaderContainer from './components/Header/HeaderContainer'
-import OrderPage from './components/OpderPage/OrderPage'
+import OrderPageContainer from './components/OpderPage/OrderPageContainer'
 
 function App() {
   return (
     <div className="App">
       <HeaderContainer />
       <Switch>
+      <Route path="/" exact render={() => <BooksPageContainer />} />
       <Route path="/books" render={() => <BooksPageContainer />} />
       <Route path="/cart" render={() => <CartPageContainer />} />
-      <Route path="/order" render={() => <OrderPage />} />
+      <Route path="/order" render={() => <OrderPageContainer />} />
 
       </Switch>
     </div>

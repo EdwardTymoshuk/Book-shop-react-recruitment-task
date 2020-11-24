@@ -1,3 +1,43 @@
+.header {
+    width: 100vw;
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.header svg {
+    color: #FDAC53;
+}
+.header_brand {
+    display: inline-flex;
+}
+.header_brand a{
+    font-family: 'Castoro', serif;
+    color: floralwhite;
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+.header_brand a:active,
+.header_brand a:visited,
+.header_brand a:hover {
+    text-decoration: none;
+}
+.header_brand p{
+    margin: 0 0 0 10px;
+}
 .header_search button{
     margin: 0 10px;
+}
+.header_cart {
+    background-color: transparent;
+    border: none;
+}
+.header_cart a {
+text-decoration: none;
+color: #FDAC53
+}
+.header_cart svg {
+    transition: ease-in-out .5s;
+}
+.header_cart svg:hover {
+    transform: rotate(360deg);
 }

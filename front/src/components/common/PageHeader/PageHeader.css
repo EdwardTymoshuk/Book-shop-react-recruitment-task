@@ -1,8 +1,9 @@
 .page-header {
     height: 100px;
-    background-color: aliceblue;
+    background-color: floralwhite;
     display: grid;
     align-content: center;
     font-size: 2em;
     text-transform: uppercase;
+    font-family: 'Castoro', serif;
 }

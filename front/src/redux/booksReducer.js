@@ -18,7 +18,6 @@ export const setBooks = (books = initialState) => ({ type: 'BOOKS/SET_BOOKS', bo
 export const getBooks = () => async (dispatch) => {
   let data = await booksAPI.getBooks()
   dispatch(setBooks(data.data))
-
 }
 
 export const searchBook = (searchingElement) => async (dispatch) => {

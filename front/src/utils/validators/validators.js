@@ -14,4 +14,4 @@ export const tooOld = value =>
 export const aol = value =>
   value && /.+@aol\.com/.test(value) ?
   'Really? You still use AOL for your email?' : undefined
-export const postalCode = value => value && !/^\d{2}(-\d{3})?$/ .test(value) ? 'Niewłaściwy kod pocztowy. Podaj kod pocztowy w formacie XX-XXX' : undefined
+export const zipCode = value => value && !/^\d{2}(-\d{3})?$/ .test(value) ? 'Niewłaściwy kod pocztowy. Podaj kod pocztowy w formacie XX-XXX' : undefined

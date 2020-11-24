@@ -9,3 +9,9 @@ export const booksAPI = {
         return instance.get('/book').then(response => response.data)
         }
     }
+
+    export const cartAPI = {
+        makeAnOrder({order, ...customer}) {
+            return instance.post('/order', {order, ...customer}).then(response => response.data)
+        }
+    }
