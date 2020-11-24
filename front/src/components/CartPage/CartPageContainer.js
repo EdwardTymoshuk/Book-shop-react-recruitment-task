@@ -9,8 +9,7 @@ const CartPageContainer = (props) => {
     useEffect(() => props.getCart(), [])
 
     const deleteBookFromCart = (bookId) => {
-        let arr = props.cart.filter(item => item ? item._id !== bookId : '')
-        console.log(props.cart)
+        let arr = props.cart.filter((item) => item ? item._id !== bookId : '')
         props.setCart(arr)
     }
 

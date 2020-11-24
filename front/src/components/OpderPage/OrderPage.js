@@ -1,16 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PageHeader from '../common/PageHeader/PageHeader'
 import OrderForm from './OrderForm'
 import { reduxForm } from 'redux-form'
 import './OrderPage.css'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Redirect } from 'react-router-dom'
 
 const OrderPage = (props) => {
 
+    const [isOrderSuccess, setIsOrderSuccess] = useState(false)
+
     let makeAnOrder = (values) => {
         props.makeAnOrder(values)
+        setIsOrderSuccess(true)
     }
 
+    if(!!isOrderSuccess) {
+        return <Redirect to="/" />
+    }
     return (
         <container>
             <PageHeader header="Podsumowanie" />

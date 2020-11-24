@@ -15,6 +15,13 @@
 -moz-box-shadow: 0px 0px 32px -3px rgba(253,172,83,1) !important;
 box-shadow: 0px 0px 32px -3px rgba(253,172,83,1) !important;
 }
+.books_card-added {
+    transition: ease-in .5s;
+    
+}
+.books_card-added svg{
+    color: #5cb85c;
+}
 @media screen and (max-width: 1024px) {
     .books_container {
         display: grid;

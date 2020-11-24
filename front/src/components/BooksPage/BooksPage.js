@@ -3,8 +3,9 @@ import './BooksPage.css'
 import PageHeader from '../common/PageHeader/PageHeader'
 
 const BooksPage = (props) => {
-
+ 
     const addToCart = (item) => {
+        item._id = Date.now()
         props.addToCart(item)
     }
 

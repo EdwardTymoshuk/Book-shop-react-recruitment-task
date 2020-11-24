@@ -6,20 +6,21 @@ import { addToCart } from '../../redux/cartReducer'
 
 const BooksPageContainer = (props) => {
 
-    useEffect(() => props.getBooks(), [])
+    useEffect(() => props.getBooks(), [props.cart])
 
     const addToCart = (item) => {
         props.addToCart(item)
     }
 
     return (
-        <BooksPage books={props.books.books} addToCart={addToCart} />
+        <BooksPage books={props.books} addToCart={addToCart} />
     )
 }
 
 let mapStateToProps = (state) => {
     return {
-        books: state.booksPage,
+        books: state.booksPage.books,
+        cart: state.cartPage.cart
     }
 }
 export default connect(mapStateToProps, { getBooks, addToCart })(BooksPageContainer)

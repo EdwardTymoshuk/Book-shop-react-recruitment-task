@@ -9,18 +9,15 @@ const OrderPageContainer = (props) => {
 
     let makeAnOrder = (values) => {
         let order = props.cart.reduce((prev, item) => {
-            !prev[item.id]
-            ?
-            prev[item.id] = 1
-            :
-            prev[item.id] +=1
+            !prev[item.id] ? prev[item.id] = 1 : prev[item.id] += 1
             return prev
         }, {})
 
-        props.makeAnOrder(Object.entries(order).map((item) => ({id: item[0], quantity: item[1]})), values)
+        props.makeAnOrder(Object.entries(order).map((item) => ({ id: item[0], quantity: item[1] })), values)
+        
     }
     return (
-        <OrderPage cart={props.cart} makeAnOrder={makeAnOrder}/>
+        <OrderPage cart={props.cart} makeAnOrder={makeAnOrder} />
     )
 }
 
@@ -30,4 +27,4 @@ let mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {makeAnOrder})(OrderPageContainer)
+export default connect(mapStateToProps, { makeAnOrder })(OrderPageContainer)

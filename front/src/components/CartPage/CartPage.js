@@ -32,18 +32,19 @@ const CartPage = (props) => {
                         !!props.cart.length
                             ?
                             props.cart.map((item, i) => {
-                                item._id = i
-                                return <li className="list-group-item" key={item._id}>
+                                return (
+                                <li className="list-group-item" key={i}>
                                     <div className="cart_list-left-block">
                                         <img src={item.cover_url} alt="Okładka książki" />
                                         <span>{item.title}</span>
-                                        <span>{item.author}</span>
+                                        <span>{item._id}</span>
                                     </div>
                                     <div className="cart_list-rigth-block ml-auto">
                                         <p>{item.price} {item.currency} </p>
                                         <button onClick={() => deleteBookFromCart(item._id)}>X</button>
                                     </div>
                                 </li>
+                                )
                             })
                             :
                             <div class="cart_list-empty jumbotron jumbotron-fluid">
