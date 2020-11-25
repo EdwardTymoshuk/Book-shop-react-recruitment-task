@@ -20,7 +20,13 @@ const OrderForm = (props) => {
             <Field name="city" id="city" validate={[required]} type="text" class="form-control" placeholder="Podaj swoją miejscowość" component={Input} />
             <label for="zip_code">Kod pocztowy</label>
             <Field name="zip_code" id="zip_code" validate={[required, zipCode]} type="text" inputmode="numeric" class="form-control" placeholder="Podaj swój kod pocztowy (w formacie XX-XXX)" component={Input} />
-            <button type="submit" class="btn btn-primary" disabled={props.submitting} onClick={() => { }}>zamawiam i płacę</button>
+            {
+                    props.cart.length
+                        ?
+                        <button className="btn">zamawiam i płacę</button>
+                        :
+                        <button className="btn disabled" disabled>Zamawiam i płacę</button>
+                }
         </form>
     )
 }
