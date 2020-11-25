@@ -37,7 +37,7 @@ const CartPage = (props) => {
                                     <div className="cart_list-left-block">
                                         <img src={item.cover_url} alt="Okładka książki" />
                                         <span>{item.title}</span>
-                                        <span>{item._id}</span>
+                                        <span>{item.author}</span>
                                     </div>
                                     <div className="cart_list-rigth-block ml-auto">
                                         <p>{item.price} {item.currency} </p>
